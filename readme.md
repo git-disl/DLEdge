@@ -153,7 +153,7 @@ This project is developed based on two repositories:
 This project is managed and maintained by [Ka-Ho Chow](https://khchow.com).
 
 * [Ka-Ho Chow](https://khchow.com): khchow@gatech.edu
-* Quang Huynh
+* [Quang Huynh](https://www.linkedin.com/in/hvquang/)
 * Sonia Mathew
 * Hung-Yi Li
 * Yu-Lin Chung
