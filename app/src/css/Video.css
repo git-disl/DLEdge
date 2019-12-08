@@ -1,0 +1,30 @@
+
+video, canvas, img {
+  position: absolute;
+  object-fit: cover;
+
+}
+
+#canvasRef {
+  visibility: hidden;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.controlBtn{
+  margin-right: 3vmin;
+  color: #046595;
+  border-color: #046595;
+  background-color: white;
+}
+
+.controlBtn:hover {
+  background-color: #046595;
+  color:white;
+}
+
+.frame {
+  margin-top: 3vmin;
+}

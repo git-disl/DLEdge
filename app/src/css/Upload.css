@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-middle;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  color: #046595;
+}
+
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

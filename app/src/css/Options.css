@@ -1,0 +1,27 @@
+.option {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 15px;
+  border: 3px solid #046595;
+  width: 200px;
+  height: 200px;
+  color: #046595;
+}
+
+.option:hover {
+  background-color: #046595;
+  color: white;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.options {
+  margin-bottom: 5px;
+}

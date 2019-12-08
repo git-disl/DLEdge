@@ -1,0 +1,73 @@
+.backButton {
+  color: #046595;
+}
+
+.optionCards .card {
+  border-color: #046595;
+}
+.optionCards .card-header {
+  background-color: #046595;
+  color: white;
+  font-size: 16px;
+}
+
+.topRow{
+  margin-top: 20px;
+}
+
+.optionCards .card {
+  margin-bottom: 10px;
+}
+
+.optionCards .form-check-input {
+  margin-top: 0;
+}
+
+.optionCards .form-check-label {
+  padding-left: 5px;
+}
+
+.optionCards .form-check-input {
+  width:20px;
+  height:20px;
+}
+
+.legend .box {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+}
+
+.legend .label {
+  display: inline-flex;
+  padding-left: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modelSelector .form-control {
+  display: inline-block;
+  width: 60%;
+  font-size: 16px;
+  height: calc(2em);
+}
+
+#modelOption {
+  margin-bottom: 5px;
+}
+
+.modelSelector .form-label {
+  margin-right: 5px;
+}
+
+.controlBtn{
+  margin-right: 3vmin;
+  color: #046595;
+  border-color: #046595;
+  background-color: white;
+}
+
+.controlBtn:hover {
+  background-color: #046595;
+  color:white;
+}
