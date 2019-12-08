@@ -33,10 +33,10 @@ The server is a simple Flask server.
 
 
 To run the server:
-1. pip install Flask (prefered in virtualenv) https://flask.palletsprojects.com/en/1.1.x/installation/
-2. setup OpenVINO env as instructed by Intel
-3. run `python3 server_paralel.py`
-4. plugin the device when you see the instruction, one by one
+1. Install Flask with `pip install Flask`
+2. Setup OpenVINO env as instructed by Intel
+3. Run `python3 server_parallel.py`
+4. Plugin the device one by one according to the instruction
 
 
 The server supports two APIs
@@ -132,15 +132,6 @@ The dependencies of this project have been listed in `requirements.txt`. The cur
 * Operating System: Ubuntu 18.04.3 LTS
 * Python Version: Python 3.6.8
 * Web Browser: Firefox
-
-
-## Issues
-The following items are identified to be improved in the next version:
-- [ ] Support Chrome
-- [ ] Implement web socket for communication between the frontend and backend
-- [ ] Allow changing hardware settings from the frontend (e.g., number of NCS devices)
-- [ ] Extend to any object detector (e.g., SSD, Faster R-CNN)
-- [ ] Print console log in the frontend
 
 ## Status
 We are continuing the development of this project and there is ongoing work in our lab regarding deep learning on the edge.
