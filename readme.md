@@ -1,20 +1,20 @@
 ## Introduction
-This project aims at accelerating deep neural networks on the edge using Intel Neural Compute Stick 2 (NCS). We show that NCSs are capable of speeding up the inference time of complicated neural networks to be efficient enough to run locally on edge devices. Such acceleration paves the way to develop ensemble learning on the edge for performance improvement. As a motivating example, we exploit object detection to be the application and utilize the well-known algorithm YOLOv3 as the objector. 
+This project aims at accelerating deep neural networks on edge devices using Intel Neural Compute Stick 2 (NCS). We show that NCS is capable of speeding up the inference time of complicated neural networks, which can be efficient enough to run locally on edge devices. Such acceleration paves the way to develop ensemble learning on the edge for performance improvement. As a motivating example, we exploit object detection to be the application and utilize the well-known algorithm YOLOv3 as the detector. 
 
-We further develop a web-based visualization platform to support object detection on (1) photo, (2) video, and (3) webcam and display the frame per second (FPS) to indicate the speed up using one or multiple NCSs running in parallel. The architecture of the system is as below.
+We further develop a web-based visualization platform to support (ensemble) object detection. Photos and videos from local files or webcam are supported. Frame per second (FPS) is displayed to indicate the speed-up made by one or more NCS devices in parallel. The architecture of the system is as below.
 
 ![Architecture Diagram](media/architecture.png)
 
 ## Demo
-We provide a demo video below to show the basic usage of this project. You may run the source code to replicate the demo using NCS devices.
+We provide a video below to demonstrate this project. You may run the source code to replicate the demo using NCS devices.
 
 [![](http://img.youtube.com/vi/-qs5oX4c-qU/0.jpg)](http://www.youtube.com/watch?v=-qs5oX4c-qU "Demo")
 
 
 ## Installation
-This project consists of two components: (1) client-side for detection visualization and (2) server-side hosting the Intel Compute Sticks for object detection. You should follow the instruction carefully to start each component. This following instruction assumes that you have already installed OpenVINO according to the guideline provided by Intel to run NCS on your machine.
-### Client
+This project consists of two components: (1) client-side for detection visualization and (2) server-side hosting the Intel Compute Sticks for object detection. You should follow the instruction carefully to start each component. The following instruction assumes that you have already installed OpenVINO [[Link]](https://software.intel.com/en-us/neural-compute-stick) according to the guideline provided by Intel to run NCS on your machine.
 
+### Client
 The client is a React app. The UI allows three types of inputs - image, video and webcam stream. If the input is an image, it is converted to a base64 encoded string and sent to server. The server decodes the image and runs the detection algorithm on it. Server then sends back the prediction results - class, score and bounding box locations - which are then displayed on the UI. For video or video stream captured through UI, the workflow is same, except that in this case, each frame of the video is encoded as base64 string and sent to server.
 
 To run the client, follow the below steps
@@ -134,9 +134,7 @@ The dependencies of this project have been listed in `requirements.txt`. The cur
 * Web Browser: Firefox
 
 ## Status
-We are continuing the development of this project and there is ongoing work in our lab regarding deep learning on the edge.
-
-This project is developed based on two repositories:
+We are continuing the development of this project. This project is developed based on two repositories:
 * PINTO0309/OpenVINO-YoloV3: https://github.com/PINTO0309/OpenVINO-YoloV3
 * opencv/open_model_zoo: https://github.com/opencv/open_model_zoo
 
