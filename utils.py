@@ -1,3 +1,42 @@
+import cv2
+import base64
+import numpy as np
+
+
+def base64tocv2(s):
+    """
+    Convert base64 encoded string of image to cv2 image
+    :param s: base64 encoded string
+    :return: cv2 image of the encoded string
+    """
+    return cv2.imdecode(np.fromstring(base64.decodebytes(str.encode(s.split(',')[-1])), dtype=np.uint8), 1)
+
+
+def intersection_over_union(box_1, box_2):
+    """
+    Compute intersection over union for ensemble detection
+    :param box_1: (x, y, w, h) of the first bounding box
+    :param box_2: (x, y, w, h) of the second bounding box
+    :return: Intersection over union
+    """
+    xmin_1, ymin_1 = box_1['bbox'][0], box_1['bbox'][1]
+    xmin_2, ymin_2 = box_2['bbox'][0], box_2['bbox'][1]
+    xmax_1, ymax_1 = box_1['bbox'][2] + xmin_1, box_1['bbox'][3] + ymin_1
+    xmax_2, ymax_2 = box_2['bbox'][2] + xmin_2, box_2['bbox'][3] + ymin_2
+    width_of_overlap_area = min(xmax_1, xmax_2) - max(xmin_1, xmin_2)
+    height_of_overlap_area = min(ymax_1, ymax_2) - max(ymin_1, ymin_2)
+    if width_of_overlap_area < 0 or height_of_overlap_area < 0:
+        area_of_overlap = 0
+    else:
+        area_of_overlap = width_of_overlap_area * height_of_overlap_area
+    box_1_area = (ymax_1 - ymin_1) * (xmax_1 - xmin_1)
+    box_2_area = (ymax_2 - ymin_2) * (xmax_2 - xmin_2)
+    area_of_union = box_1_area + box_2_area - area_of_overlap
+    if area_of_union == 0:
+        return 0
+    return area_of_overlap / area_of_union
+
+
 def search_list(l, x, NOT_FOUND=-1):
     """
     A searching function to find an empty slot in the async request list

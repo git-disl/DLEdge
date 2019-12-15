@@ -17,7 +17,7 @@ args = parser.parse_args()
 number_of_ncs = args.number_of_ncs  # TODO: Support numncs=0 ==> CPU mode
 assert number_of_ncs > 0, "You should use at least one Intel Neural Compute Stick 2 to run this project."
 
-# Current version supports ten tiny-YOLOv3 trained on PASCAL VOC with different input sizes
+# Current version supports ten tiny-YOLOv3 trained on PASCAL VOC with different input sizes (see the folder "models")
 # TODO: Read the list of models from a config file
 ALL_MODELS = tuple([("tiny_yolov3_%d" % res, res) for res in range(320, 640, 32)])
 
