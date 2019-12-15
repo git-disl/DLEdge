@@ -6,7 +6,7 @@ We develop a web-based visualization platform to support (ensemble) object detec
 ![Architecture Diagram](media/architecture.png)
 
 ## Demo
-We provide a video below to demonstrate this project. You may run the source code to replicate the demo using NCS devices.
+We provide a video below to demonstrate this project. You may run the source code to replicate the demo using NCS devices. Make sure you have turned on the "Subtitles" on YouTube.
 
 [![](http://img.youtube.com/vi/-qs5oX4c-qU/0.jpg)](http://www.youtube.com/watch?v=-qs5oX4c-qU "Demo")
 
