@@ -122,6 +122,9 @@ The server supports two APIs
 	}
 	```
 
+If you encounter the following message multiple times during the model loading, unplug NCS devices, wait for a few seconds, and reinstall them to the host.
+> Failed, trying again in 2 second(s)
+
 ## Supported Environment
 
 The dependencies of this project have been listed in `requirements.txt`. The current version of this project is tested on the following environment:
