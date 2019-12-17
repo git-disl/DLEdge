@@ -81,11 +81,12 @@ def detect_objects_response():
                 objects_detected.append({'bbox': [obj.xmin, obj.ymin, obj.xmax - obj.xmin, obj.ymax - obj.ymin],
                                          'class': obj.name, 'score': float(obj.confidence)})
             if t_iou < min_t_iou:
-                min_t_iou = t_iou  # TODO: allow user to specify this param
+                min_t_iou = t_iou
         except:
             pass
         response[model_name] = objects_detected
     if execution_mode == 'ensemble':
+        # Ensemble Detection: Use non-maximum suppression to keep only those detected objects with high confidence
         objects = list(sorted(list(itertools.chain.from_iterable(response.values())),
                               key=lambda obj: obj['score'], reverse=True))
         skip_ids = []

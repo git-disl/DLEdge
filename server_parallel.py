@@ -14,11 +14,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-numncs', '--number_of_ncs', dest='number_of_ncs', type=int, default=1,
                     help='Number of NCS. (Default=1)')
 args = parser.parse_args()
-number_of_ncs = args.number_of_ncs  # TODO: Support numncs=0 ==> CPU mode
+number_of_ncs = args.number_of_ncs
 assert number_of_ncs > 0, "You should use at least one Intel Neural Compute Stick 2 to run this project."
 
 # Current version supports ten tiny-YOLOv3 trained on PASCAL VOC with different input sizes (see the folder "models")
-# TODO: Read the list of models from a config file
 ALL_MODELS = tuple([("tiny_yolov3_%d" % res, res) for res in range(320, 640, 32)])
 
 # A set of models loaded from the frontend
@@ -43,10 +42,10 @@ def async_infer(worker):
 class NcsWorker(object):
     def __init__(self, devid, frame_buffer, results, number_of_ncs, api_results, model_name, input_size, plugin):
         self.devid = devid
-        self.model_name = 'voc_%s' % model_name  # TODO: Support generic models
+        self.model_name = 'voc_%s' % model_name
         self.model_xml = "./models/FP16/%s.xml" % self.model_name
         self.model_bin = "./models/FP16/%s.bin" % self.model_name
-        self.class_names = load_names(dataset='voc')  # TODO: Support generic training dataset (e.g., coco)
+        self.class_names = load_names(dataset='voc')
 
         self.m_input_size = input_size
         self.num_requests = 4

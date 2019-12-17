@@ -37,15 +37,15 @@ def intersection_over_union(box_1, box_2):
     return area_of_overlap / area_of_union
 
 
-def search_list(l, x, NOT_FOUND=-1):
+def search_list(sl, x, NOT_FOUND=-1):
     """
     A searching function to find an empty slot in the async request list
-    :param l: Search list
+    :param sl: Search list
     :param x: Search target value
     :param NOT_FOUND: A value indicating target not found (must be less than 0 to avoid confusion)
     :return: The first index of the target value in the search list
     """
-    return l.index(x) if x in l else NOT_FOUND
+    return sl.index(x) if x in sl else NOT_FOUND
 
 
 def load_names(dataset):

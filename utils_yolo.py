@@ -1,6 +1,7 @@
 # utils_yolo.py contains all functions or classes that are needed to parse the raw outputs obtained from the detector.
-# It is recommended to maintain one utils.py per detection algorithm even if some functions are overlapped.
-# The parser below is modified from OpenCV:
+# It is recommended to maintain one utils_xxxx.py per detection algorithm xxxx even if some functions are overlapped.
+# To avoid confusion, always use the detection algorithm name as the prefix.
+# The parser below is modified from the OpenCV repository:
 # https://github.com/opencv/open_model_zoo/blob/master/demos/python_demos/object_detection_demo_yolov3_async/object_detection_demo_yolov3_async.py
 from utils import DetectedObject
 import math

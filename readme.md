@@ -126,14 +126,15 @@ If you encounter the following message multiple times during the model loading, 
 > Failed, trying again in 2 second(s)
 
 ## Supported Environment
-
-The dependencies of this project have been listed in `requirements.txt`. The current version of this project is tested on the following environment:
+Apart from the installation of OpenVINO for NCS devices, the dependencies of this project have been listed in `requirements.txt`. The current version of this project is tested on the following environment:
 * Operating System: Ubuntu 18.04.3 LTS
 * Python Version: Python 3.6.8
 * Web Browser: Firefox
 
 ## Status
-We are continuing the development of this project. This project is developed based on two repositories:
+The object detection models in this repository are ten tiny YOLOv3 trained with the PASCAL VOC dataset having different input resolution. 
+
+This project is developed based on two repositories:
 * PINTO0309/OpenVINO-YoloV3: https://github.com/PINTO0309/OpenVINO-YoloV3
 * opencv/open_model_zoo: https://github.com/opencv/open_model_zoo
 
