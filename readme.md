@@ -125,7 +125,7 @@ The server supports two APIs
 If you encounter the following message multiple times during the model loading, unplug NCS devices, wait for a few seconds, and reinstall them to the host.
 > Failed, trying again in 2 second(s)
 
-## Supported Environment
+## Tested Environment
 Apart from the installation of OpenVINO for NCS devices, the dependencies of this project have been listed in `requirements.txt`. The current version of this project is tested on the following environment:
 * Operating System: Ubuntu 18.04.3 LTS
 * Python Version: Python 3.6.8
