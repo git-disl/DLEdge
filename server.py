@@ -7,7 +7,6 @@ import time
 import itertools
 import heapq
 import logging
-from utils import vote_cliques, get_cliques
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
@@ -21,8 +20,6 @@ fps_stats = []
 app = Flask(__name__)
 CORS(app)
 reload_model_lock = Lock()
-
-
 
 
 def detect(image, model, frame_id, conf=0.2, iou=0.45, mode="parallel"):
@@ -88,9 +85,7 @@ def detect_objects_response():
         except:
             pass
         response[model_name] = objects_detected
-
     if execution_mode == 'ensemble':
-        """
         # Ensemble Detection: Use non-maximum suppression to keep only those detected objects with high confidence
         objects = list(sorted(list(itertools.chain.from_iterable(response.values())),
                               key=lambda obj: obj['score'], reverse=True))
@@ -103,26 +98,11 @@ def detect_objects_response():
         for i, obj in enumerate(objects):
             if i not in skip_ids:
                 response['all'].append(obj)
-        """
-        # Ensemble Detection: Use majority voting on Graph Cliques algorithm
-        # The criterion to choose a box prediction for a clique is the box
-        # the box predicted with highest score
-
-        cliques, G = get_cliques(response)
-        predictions = vote_cliques(cliques, G)
-        # Get all models
-        response = {'all': []}
-        for pred in predictions:
-            # We do not need the model that gave the prediction
-            pred.pop('model')
-            response['all'].append(pred)
-
     if model_names:
         record_fps()
         response["fps"] = get_fps_stats()
     else:
         response["fps"] = None
-
     return jsonify(response), 201
 
 
