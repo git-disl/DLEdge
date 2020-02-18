@@ -139,12 +139,13 @@ This project is developed based on two repositories:
 * opencv/open_model_zoo: https://github.com/opencv/open_model_zoo
 
 ## Contributors
-This project is managed and maintained by [Ka-Ho Chow](https://khchow.com).
+This project is managed and maintained by [Ka-Ho Chow](https://khchow.com) with the following contributors from Georgia Tech (ordered according to the last name):
 
 * [Ka-Ho Chow](https://khchow.com)
-* [Quang Huynh](https://www.linkedin.com/in/hvquang/)
-* Sonia Mathew
-* Hung-Yi Li
 * Yu-Lin Chung
+* [Quang Huynh](https://www.linkedin.com/in/hvquang/)
+* Hung-Yi Li
+* Sonia Mathew
+* [Víctor Castro Serrano](https://www.linkedin.com/in/victor-castro-serrano/)
 
 Contributions are welcomed! Please contact [Ka-Ho Chow](https://khchow.com) (khchow@gatech.edu) if you have any problem.
